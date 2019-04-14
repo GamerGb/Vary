@@ -1,0 +1,39 @@
+{
+  "name": "Vary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "11.14.0"
+  },
+  "keywords": [],
+  "author": "ImDiogo912",
+  "license": "ISC",
+  "dependencies": {
+    "common-tags": "^1.8.0",
+    "jimp": "0.6.0",
+    "cpu-stat": "^2.0.1",
+    "dblapi.js": "^2.3.0",
+    "discord.js": "discordjs/discord.js#11.4-dev",
+    "ffmpeg": "0.0.4",
+    "mathjs": "^5.4.0",
+    "moment": "^2.22.2",
+    "moment-duration-format": "^2.2.2",
+    "mongoose": "^5.4.2",
+    "ms": "^2.1.1",
+    "youtube-search": "1.1.4",
+    "node-opus": "0.3.1",
+    "opusscript": "0.0.6",
+    "os": "^0.1.1",
+    "simple-youtube-api": "^5.1.1",
+    "snekfetch": "^4.0.4",
+    "sqlite3": "^4.0.4",
+    "util": "^0.11.1",
+    "weather-js": "^2.0.0",
+    "ytdl-core": "^0.28.0"
+  }
+}
