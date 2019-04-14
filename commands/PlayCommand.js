@@ -19,7 +19,7 @@ exports.run = (vary, message, args) => {
                   let playlist = vary.queue.get(message.guild.id)
                       const music = ((playlist || {}).queue || []).shift()
                      if (!music) {
-                        message.channel.send('A playlist acabou e estou saindo do canal.')
+                        message.channel.send('<:stop:563274776882315275> A playlist acabou e estou saindo do canal.')
                         vary.queue.delete(message.guild.id)
                         message.guild.me.voiceChannel.leave()
                         return
@@ -27,7 +27,7 @@ exports.run = (vary, message, args) => {
                     vary.queue.set(message.guild.id, playlist)
                     play(music)
                 })
-                message.channel.send(`Tocando agora \`${obj.videoInfo.title}\`!`)
+                message.channel.send(`<:play:563274942427168778> Tocando agora \`${obj.videoInfo.title}\`!`)
               }
               play({ ytdl: ytdlVideo, videoInfo: videos[0] })
           })
