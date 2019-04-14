@@ -2,12 +2,11 @@ const Discord = require("discord.js")
 const config = require("../config.json")
 
 module.exports = async (vary, message, args) => {
-   if (message.author.bot) return;
   if(message.channel.name === "🔖│sugestões"){
     await message.react('✅')
     await message.react('❌')
   }
-
+   if (message.author.bot) return;
   let mention = [`<@${vary.user.id}>`, `<@!${vary.user.id}>`]
 
     mention.find(mention => {
