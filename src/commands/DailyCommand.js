@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 const mongoose = require("mongoose")
-const db = require("../database.js")
+const db = require("../../database.js")
 
 exports.run = (vary, message, args) => {
   db.Users.findOne({userID: message.author.id}, (err, user) =>{
