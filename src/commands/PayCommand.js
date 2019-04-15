@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 const mongoose = require("mongoose")
-const db = require("../database.js")
+const db = require("../../database.js")
 
 exports.run = (vary, message, args) => {
   const ownerID = '375627393773207554';
