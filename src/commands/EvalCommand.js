@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const config = require('../../config.json')
-const db = require("../database.js")
+const db = require("../../database.js")
 
 exports.run = (vary, message, args) => {
   const clean = text => {
