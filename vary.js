@@ -30,7 +30,7 @@ dbl.on('error', e => {
  console.log(`Oops! ${e}`);
 })
 
-fs.readdir("./events/", (err, files) => {
+fs.readdir("./src/events/", (err, files) => {
   if (err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js")
   if (jsfile.length <= 0) {
@@ -40,7 +40,7 @@ fs.readdir("./events/", (err, files) => {
   console.log(`Foram carregados um total de ${jsfile.length} eventos.`)
   jsfile.forEach(f => {
     const eventName = f.split('.')[0]
-    const event = require(`./events/${f}`)
+    const event = require(`./src/events/${f}`)
 
     vary.on(eventName, event.bind(null, vary))
   });
@@ -50,7 +50,7 @@ fs.readdir("./events/", (err, files) => {
   });
 });
 
-fs.readdir('./commands', function (err, f) {
+fs.readdir('./src/commands', function (err, f) {
 
     try {
         let file = f.filter(f => f.split('.')
@@ -59,7 +59,7 @@ fs.readdir('./commands', function (err, f) {
             console.log('Cadê os comandos fera?')
         }
         file.forEach(function (f, i) {
-            let local = require(`./commands/${f}`)
+            let local = require(`./src/commands/${f}`)
             vary.commands.set(local.config.name, local)
             local.config.aliases.forEach(function (alias) {
                 vary.aliases.set(alias, local.config.name)
