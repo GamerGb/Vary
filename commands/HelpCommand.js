@@ -98,7 +98,7 @@ let helpembed = new Discord.RichEmbed()
       msg.react('⬅');
       msg.react('💵');
       msg.react('🎧');
-      msg.react('✨);
+      msg.react('✨');
       msg.react('528990466675572737');
   const collector = msg.createReactionCollector((r, u) => (r.emoji.name === '🗃', '👮', '💵', 'Minecraft', '⬅', '🎧', '✨') && (u.id !== vary.user.id && u.id === message.author.id))
   collector.on("collect", r=>{
