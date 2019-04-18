@@ -21,7 +21,7 @@ module.exports = async (vary, message, args) => {
 
 })
 
-let prefix = [`<@${vary.user.id}> `, `<@!${vary.user.id}> `, config.prefix, 'vary ', 'Vary ']
+let prefix = [`<@${vary.user.id}> `, `<@!${vary.user.id}> `, config.prefix]
 
 prefix.find(prefix=>{
 
