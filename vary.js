@@ -19,17 +19,6 @@ vary.queue = new Discord.Collection()
 vary.commands = new Discord.Collection()
 vary.aliases = new Discord.Collection()
 
-const DBL = require("dblapi.js");
-const dbl = new DBL(process.env.DBL, vary);
-
-dbl.on('posted', () => {
-  console.log('Contador de servidores postado!');
-})
-
-dbl.on('error', e => {
- console.log(`Oops! ${e}`);
-})
-
 fs.readdir("./events/", (err, files) => {
   if (err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js")
